@@ -7,10 +7,9 @@ traverseList(L2)
 """
 
 class Node:
-    data = 0
-    Next = None
     def __init__(self, data):
         self.data = data
+        self.Next = None
     
 def traverseList(node):
     while(node != None):
