@@ -1,5 +1,6 @@
 """
 stack = Stack(size)
+stack = Stack2()
 stack.push(value)
 value = stack.pop()
 value = stack.peek()
@@ -34,5 +35,30 @@ class Stack:
         value = self.buffer[self.pointer]
         return value
     
-    def isEmpty():
+    def isEmpty(self):
         return self.pointer == -1
+
+class Stack2:
+    def __init__(self):
+        self.buffer = []
+        
+    def push(self, value):
+        self.buffer.append(value)
+        
+    def pop(self):
+        if(len(self.buffer) == 0):
+            print("Stack is empty")
+            return
+        value = self.buffer[-1]
+        del(self.buffer[-1])
+        return value
+    
+    def peek(self):
+        if(len(self.buffer) == 0):
+            print("Stack is empty")
+            return
+        value = self.buffer[-1]
+        return value
+    
+    def isEmpty(self):
+        return len(self.buffer) == 0
