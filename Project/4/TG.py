@@ -9,3 +9,9 @@ class TreeNode:
 class Graph:
     def __init__(self, n):
         self.graph = np.zeros([n, n])
+    
+    def addNode(self, i, j, data):
+        self.graph[i][j] = data
+
+def dfsTraverse(graph):
+    
